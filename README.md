@@ -10,8 +10,28 @@ Example of Tendermint bundled with ABCI app
 
 ## Run
 
+### Node 1
+
 ```sh
-go run ./abci --home ./config/tendermint/node1 node
+ABCI_DB_DIR_PATH=DB1 go run ./abci --home ./config/tendermint/node1 node
+```
+
+### Node 2
+
+```sh
+ABCI_DB_DIR_PATH=DB2 go run ./abci --home ./config/tendermint/node2 node
+```
+
+### Node 3
+
+```sh
+ABCI_DB_DIR_PATH=DB3 go run ./abci --home ./config/tendermint/node3 node
+```
+
+### Node 4
+
+```sh
+ABCI_DB_DIR_PATH=DB4 go run ./abci --home ./config/tendermint/node4 node
 ```
 
 **Environment variable options**
@@ -31,9 +51,15 @@ go test ./test -count=1 -v
 ## Reset chain
 
 ```sh
-rm -rf DB/
+rm -rf DB*/
 
 go run ./abci --home ./config/tendermint/node1 unsafe_reset_all
+
+go run ./abci --home ./config/tendermint/node2 unsafe_reset_all
+
+go run ./abci --home ./config/tendermint/node3 unsafe_reset_all
+
+go run ./abci --home ./config/tendermint/node4 unsafe_reset_all
 ```
 
 ## Generate go from protobuf

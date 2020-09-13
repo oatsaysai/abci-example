@@ -5,10 +5,10 @@
 
 # TCP or UNIX socket address of the ABCI application,
 # or the name of an ABCI application compiled in with the Tendermint binary
-proxy_app = "tcp://127.0.0.1:26658"
+proxy_app = "tcp://127.0.0.1:28658"
 
 # A custom human readable name for this node
-moniker = "node1"
+moniker = "node3"
 
 # If this node is many blocks behind the tip of the chain, FastSync
 # allows them to catchup quickly by downloading blocks in parallel
@@ -61,7 +61,7 @@ filter_peers = false
 [rpc]
 
 # TCP or UNIX socket address for the RPC server to listen on
-laddr = "tcp://0.0.0.0:26657"
+laddr = "tcp://0.0.0.0:28657"
 
 # A list of origins a cross-domain request can be executed from
 # Default value '[]' disables cors support
@@ -130,7 +130,7 @@ tls_key_file = ""
 [p2p]
 
 # Address to listen for incoming connections
-laddr = "tcp://0.0.0.0:26656"
+laddr = "tcp://0.0.0.0:28656"
 
 # Address to advertise to peers for them to dial
 # If empty, will use the same port as the laddr,
@@ -139,7 +139,7 @@ laddr = "tcp://0.0.0.0:26656"
 external_address = ""
 
 # Comma separated list of seed nodes to connect to
-seeds = ""
+seeds = "16bc87d2c4887c5b7ae521f688ab643e2bfb52e6@127.0.0.1:26656"
 
 # Comma separated list of nodes to keep persistent connections to
 persistent_peers = ""
@@ -269,7 +269,7 @@ index_all_tags = false
 prometheus = false
 
 # Address to listen for Prometheus collector(s) connections
-prometheus_listen_addr = ":26660"
+prometheus_listen_addr = ":28660"
 
 # Maximum number of simultaneous connections.
 # If you want to accept a larger number than the default, make sure

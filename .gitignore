@@ -9,9 +9,5 @@ DB/
 # dependencies
 vendor/
 
-# tendermint data
-config/tendermint/node1/data
-config/tendermint/node1/config/write-file-atomic*
-
 #
 go.sum
